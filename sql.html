@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SQlight</title>
+	<!-- <script type="text/javascript" src="https://cdn.rawgit.com/kripken/sql.js/master/js/sql.js"></script> -->
+	<script type="text/javascript" src="sql.js"></script>
+</head>
+<body>
+	<form id="fileForm" name="fileForm" >
+		<input type="file" name="file" src="chinook.db" id="dbFile" autofocus  />
+	</form>
+	<script type="text/javascript">
+		dbFileElm= document.getElementById("dbFile");
+		dbFileElm.onchange = function() {
+			console.log('Loading db');
+		    var f = dbFileElm.files[0];
+		    var r = new FileReader();
+		   if(r) {console.log('New file reader created Successfully!');}
+		   else{
+		   	console.log('File reader creation failed');
+		   }
+		    r.onload = function() {
+		    	console.log('File reader onLoad');
+		        var Uints = new Uint8Array(r.result);
+		        db = new SQL.Database(Uints);
+		        if (db){
+		        	console.log('db loaded Successfully!');
+		        	insert(db);
+		    	}
+		        else{
+		        		console.warn('Try to Load DB again :(');
+		        }
+		    r.readAsArrayBuffer(f);
+		    console.log('Completed Loading file');    
+		        	debugger;
+		    }
+		}
+		function insert(db){
+			console.group('Analying Table...');
+			var res=db.exec("SELECT *  FROM sqlite_master;");
+			console.log("Column Names: " + res[0].columns);
+			res = db.exec("SELECT COUNT(*) FROM sqlite_master where type ='table';");
+			console.log("Table names: "+res[0].values[0]);
+			console.log(res[0].columns.length);
+			console.log(res[0].values[1]);
+			console.groupEnd();
+		}
+	</script>
+
+</body>
+</html>
