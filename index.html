@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>SQLight</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+      <link rel="stylesheet" href="style.css">
+
+      <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+      <script src="sql.js"></script>
+      <script src="gui.js"></script>
+   </head>
+  <body>    
+     <header class="flex mdl-shadow--4dp" id="summary">
+        <div id="tableCount"><center><span class="count">7</span><p>Tables</p></center></div>
+        <div id="indexCount"><center><span class="count">10</span><p>Indexes</p></center></div>
+        <div id="recordCount"><center><span class="count">~70000000</span><p>Records</p></center></div>
+     </header>
+   <section class="flex">
+            
+            <nav class="mdl-components__nav docs-text-styling mdl-shadow--4dp" id="tableNames">
+               <ul class="demo-list-item mdl-list">
+                    <li class="mdl-list__item" id="dbname">
+                        <span class="mdl-list__item-primary-content">
+                        DATABASE NAME
+                        </span>
+                    </li>
+                    <li class="mdl-list__item" class="tableName">
+                        <span class="mdl-list__item-primary-content">
+                        Bryan Cranston
+                        </span>
+                    </li>
+                    <li class="mdl-list__item" class="tableName">
+                        <span class="mdl-list__item-primary-content">
+                        Aaron Paul
+                        </span>
+                    </li>
+                    <li class="mdl-list__item"  class="tableName">
+                        <span class="mdl-list__item-primary-content">
+                        Bob Odenkirk
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+
+            <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp" id="tableRows">
+                <thead>
+                    <tr>
+                        <th class="mdl-data-table__cell--non-numeric">Material</th>
+                        <th>Quantity</th>
+                        <th>Unit price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+                        <td>25</td>
+                        <td>$2.90</td>
+                    </tr>
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+                        <td>50</td>
+                        <td>$1.25</td>
+                    </tr>
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+                        <td>10</td>
+                        <td>$2.35</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+   </section>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+
+.flex{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: flex;
+}
+
+body header#summary{
+    width: 100%;
+    padding-top:35px;
+}
+#tableCount,#indexCount,#recordCount{
+    width: 30%;
+    /*margin:10px 5px;*/
+}
+.count{
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#tableNames{
+    width: 15%;
+    margin-right:  5px;
+    }
+#dbname{
+    text-decoration:underline;
+    text-transform: uppercase;
+}
+.tableName{
+    text-transform: capitalize;
+}
+#tableRows{
+    width:84%;
+}
+#tableRows th{
+    font-size: 15px;
+}
