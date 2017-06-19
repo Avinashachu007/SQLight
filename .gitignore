@@ -1,3 +1,5 @@
 .vscode
 node_module
 Thumbs.db
+temp.sql
+.vscode/temp.sql
