@@ -1,8 +1,12 @@
 {
     "name":"SQlight",
     "version": "0.0.1",
+    "description": "A cross plotform SQL Browser",
     "main":"main.js",
     "scripts": {
         "start": "electron ."
+    },
+    "author": {
+      "name" : "Avinash"
     }
 }
