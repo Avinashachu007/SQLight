@@ -9,5 +9,6 @@ app.on('ready',function(){
         height:700,
         width:368
     });
+    mainWindow.setMenu(null); //No File menu
     mainWindow.loadURL("file://"+__dirname+"/index.html");
 });
