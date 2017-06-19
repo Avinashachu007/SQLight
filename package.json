@@ -10,8 +10,8 @@
     "electron": "^1.6.11"
   },
   "dependencies": {
-      "sqlite3":"3.1.8",
-      "msexcel-builder":"0.0.2"
+    "sqlite3": "3.1.8",
+    "msexcel-builder": "0.0.2"
   },
   "author": {
     "name": "Avinash"
