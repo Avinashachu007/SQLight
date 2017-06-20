@@ -7,8 +7,8 @@ var mainWindow = null;
 //app ready function
 app.on('ready',function(){
     mainWindow = new BrowserWindow({
-        height:700,
-        width:368
+        // height:700,
+        // width:368
     });
     mainWindow.setMenu(null); //No File menu
     mainWindow.loadURL("file://"+__dirname+"/index.html");
